@@ -1,0 +1,28 @@
+>>>> Vid_97
+
+--> So in the web development projects the first thing that is discussed is,
+    the backend.
+
+--> For the backend we use a PRD which is known as the Product Requirement
+    document which has information about the scopes of the backend.
+
+
+>>>> Vid_98
+--> In order to initialise the node for your backend you do 
+        npm init in your command line.
+
+--> Thats it, it creates a package.json saying stuff that you entered 
+    in the command line while it initialised.
+
+>>>> Vid_99
+
+--> In this we are adding prettier to the node directory.
+
+--> we know that there should be common syntax so prettier helps in that
+    in order to use it you have to run two commands from their website.
+
+--> Also you can set your own rules for the syntax and shit by making
+    .prettierrc file and making rules in it. 
+
+--> Also there is .prettierignore file which will ignore the files
+    mentioned in it to be syntax perfect.
