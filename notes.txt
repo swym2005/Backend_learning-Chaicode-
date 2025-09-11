@@ -26,3 +26,272 @@
 
 --> Also there is .prettierignore file which will ignore the files
     mentioned in it to be syntax perfect.
+
+>>>>Vid_100
+
+--> In this we use the nodemon functionality to restart or reload the 
+    server as soon as some changes are made to the file and it is 
+    saved.
+
+--> You gotta install it from the nodemon docs or whatever and run 
+    the install command.
+
+--> After you have done installing you have to write a new keyword for
+    script and give this command to it "nodemon filename.js".
+
+--> And then simply run --> npm run keyword
+
+>>>> Vid_101
+
+--> In this we were introduced with the .env folder.
+
+--> .env means "Environment variables".
+
+--> It basically stores the sensitive info and stuff that is stored own
+    server side.
+
+--> We need to install the dotenv package from npm and then make a 
+    .env folder.
+
+--> Then in the main index.js file you import the dotenv.
+
+--> Then we configure the path of the env file. Like where the server would
+    find it.
+
+--> Then we store the value in the variable and print it.
+
+
+>>>> Vid_102
+
+--> In this we studied about the file or directory structure that we 
+    have to maintain while working on a project.
+
+--> The directory structure is as follow:
+            /main folder
+            |
+            ->public
+              |
+              ->images
+            |
+            |
+            ->src
+              |
+              ->controllers
+              |
+              ->db
+              |
+              ->middlewares
+              |
+              ->models
+              |
+              ->routes
+              |
+              ->utils
+              |
+              ->validators
+
+--> Each and every folder is segregated according to some functionality.
+
+
+--> One more thing we learnt that git does not track empty folders
+    so by putting .gitkeep in the empty folder, git will keep a track 
+    of the empty folder as well.
+
+
+>>>> Vid_103
+
+--> In this video we installed the express.
+
+--> It provides easier ways for routing and server side scripting.
+
+--> We will import express like we did the other shit.
+
+--> Store the functionality in other variable.
+
+--> Store the port in .env and grab it and also we will keep the or part.
+
+--> we will use the get method and send the method definition for default
+    url '/'. will do response(res.send()) to send the response.
+
+--> also we can do it for other url.
+
+--> Now we will bind the server with the specified port and can also 
+    write the definition of the function if we want to.
+
+--> That's the basic express server.
+
+
+>>>> Vid_104
+
+--> In this video it was told that we cannot run our server requests directly onto the browser.
+
+--> So, we use the postman which is an api tester or you can made for testing these server requests.
+
+--> Its very handy and easy to use.
+
+--> It is also used to pass onto the frontend folks so that they can handle it accordingly ahead.
+
+
+>>>> Vid_105
+
+--> In order to maintain the structure of the project we make a folder
+    seperately for some primary express code.
+
+--> So we write the same codes as we wrote the code in index.js and
+    then export the default app(variable name holding express capabilities).
+
+--> Deprecate the code in index.js and just import the app from app.js.
+
+--> Done shit cuz.
+
+
+>>>> Vid_106
+
+--> In this video, when there is frontend being developed, one error is encountered
+    known as CORS - Cross origin resource sharing , basically it doesnt allow you to
+    integrate your backend with frontend.
+
+--> So, you configure your server according to the cors by installing it's npm package
+
+--> First we do the basic configurations.
+
+--> We setup the middleware.
+
+--> Like we can accept the json files,url data, server images, etc.
+
+--> Then we do the cors configuration...
+
+--> In that, we simply setup the cors middleware by importing the file and shit, we use(cors({object})).
+
+--> It takes an object which says the origin(source port and all), credentials(we can accept cookies and all),
+    methods that we accept in the server and the allowedHeaders. we can view the
+    headers and methods in the postman tester.
+
+--> app.use acts as a middleware.
+
+
+>>>> Vid_107 
+
+--> A server will send either a response or a errorneous response so we want to 
+    standardize this thing.
+
+--> For this we will create a seperate file which is "api-response.js" in the utils folder.
+
+--> Also we will create a "api-error.js" in the utils folder.
+
+--> Whenever a response is sent to the client the basic stuff that
+    is sent is statusCode, data, message.
+
+--> So basically we are doing the same thing in those two files,
+    by defining the classes and constructor which will be invoked whenever the object is made.
+
+--> Dont worry you dont have to remember this, just have the knowledge and 
+    use the template in other projects as needed.
+
+
+>>>> Vid_108
+
+--> The constants are also one of the things like the env data that is to be kept in 
+    the file and saved.
+
+--> So we will create another file named "constants.js" in the utils folder.
+
+--> Add the const obj_name{key: val, ....} like the userroles,taskstatus,etc.
+
+
+>>>> Vid_109
+
+--> We gotta connect with the MongoDB and for that the mongoose serves
+    as a middleman.
+
+--> Mongoose is known as ODM which is Object Data Model or ORM 
+    sometimes which is Object Relational Model. It's basically the same.
+
+--> Accessing the DB will require the credentials and shit which is
+    to be stored inside .env file. namely MONGO_URI or URL whatever.
+
+--> We will create one file in the 'db' folder we will call it as 
+    'index.js' and we can call it as dbconncetion or whatever.
+
+
+>>>> Vid_110 
+
+--> In this video, we were supposed to connect the mongoDB to the server.
+
+--> Remember, we created the MONGO_URI earlier, we will paste the db url in that.
+
+--> Setup the db,username,password,etc. 
+
+--> Paste the userame and the password at the appropriate place in the db url.
+
+--> Then import the connectDB into the index.js(main code).
+
+--> bind the connectDB with then() and catch() as it will resolve or reject.
+
+
+
+|||>>> I have understood one thing, we are creating the small small things writing their
+       definitions in the seperate files then exporting them and importing them onto the
+       main code files like index.js or app.js . <Gotcha baby💀🗿>
+
+
+>>>> Vid_111
+
+--> In this we are writing the healthcheck controllers which are used to check the health of the server
+    basically, if they are working proper or not. so in order to check the health we setup a healthcheck
+    route at which we will do the health check, the home route according to PRD is api/v1/healtcheck. 
+
+--> We will make the healthcheck.controllers.js in controllers folder. 
+
+--> In the healthcheck we do import Api response as this health check will give a response.
+
+--> we will write a const healthcheck which will get a callback like req,res as to give a response.
+
+--> Surrounding our response in try catch, in try we will send the res.status(200).json(new ApiResponse(200, message:{"msg"}));
+
+--> error mein aage batayenge hitesh sir esa bola.
+
+--> healthcheckroute.js in routes folder.
+
+--> In this, we will import Router from express. and the healthcheck too so as to serve healthcheck on our 
+    "/" route. 
+
+--> export this shit.
+
+--> In the app.js we will import healthcheckroute to configure the homeroute.
+
+--> we will set the middleman using app.use("homeroute", healthcheckroute);
+
+--> And we are done. So now if someone will write the homeroute for healthcheck they will be redirected
+    to the "/" for which we have configured the route for healthcheck. Simple.
+
+--> Now you will question ki sidha homeroute pe configure nai karna chahiye? 
+
+--> But yeh basic boilerplate type cheez hai yeh to karna hi hota hai. Baadme jo dusre karne hai karo.
+
+--> And jitne route utne healthcheck files and utne hi healthcheckroute ke files bhi.
+
+
+
+>>>> Vid_112
+
+--> If you wanna do or perform some kinda action related to the db in the healthcheck, the db would respond
+    late,so you gotta wait for the action to occur basically.
+
+--> Now, we will use the async-await kindof wrapper function for the healthcheck so it is kind of a boiler 
+    plate code which can be used everywhere you want to so we need to export the shit and we'll import the 
+    shit whenever we need to use it in some file like we do always.
+
+--> For that we will make a new file named "asyncHandler" in the utils folder.
+
+
+>>>> Vid_113
+
+--> In this, We are kind of configuring the database about what attributes of the user will be stored in the
+    db.
+
+--> For that you gotta make a file user.models.js in the folder models.
+
+--> Abhi isme bohot saare attributes hum likhenge for the db to store.
+
+--> That's it baaki sab to diya hai uss file mein technical shit.
